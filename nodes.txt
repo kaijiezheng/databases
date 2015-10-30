@@ -1,0 +1,49 @@
+SCHEMA NOTES
+
+Different relationships (ordinality)
+  one-to-many
+    easy to establish
+    the many have a foreign key to the one
+  one-to-one (?)
+  many-to-many
+    must create an intermediate join table
+    each original table has a one-to-many relationship with the join table
+
+
+Tables
+------
+MESSAGES
+
+ROOMS
+
+USERS
+
+
+EDIT
+
+server/schema.sql
+  SQL commands
+server/db/index.js
+  create SQL database with appropriate parameters, then export
+
+server/models/index.js
+  write functions to interact with our messages and users
+
+server/controllers/index.js
+  write functions to handle get requests and posts
+  updates the model's state (can also change the view)
+
+server/spec/server-spec.js
+  specs not complete
+
+
+client/
+  add chatterbox client solution here
+
+orm-resources/orm-example.js
+  object relational mapping
+  reference for refactoring node server to use sequelize ORM
+  allows us to use JS-like syntax instead of SQL
+
+server-pure-sql/
+  when refactoring node -> ORM, copy server code here
